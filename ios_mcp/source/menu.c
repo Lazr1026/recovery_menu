@@ -225,6 +225,9 @@ static void option_SetColdbootTitle(void)
         {"Wii U Menu (JPN)", {.tid = 0x0005001010040000}},
         {"Wii U Menu (USA)", {.tid = 0x0005001010040100}},
         {"Wii U Menu (EUR)", {.tid = 0x0005001010040200}},
+		{"System Settings (JPN)", {.tid = 0x0005001010047000}},
+		{"System Settings (USA)", {.tid = 0x0005001010047100}},
+		{"System Settings (EUR)", {.tid = 0x0005001010047200}},
 
         // non-retail systems only
         {"System Config Tool", {.tid = 0x000500101F700500}},
@@ -233,7 +236,7 @@ static void option_SetColdbootTitle(void)
     };
 
     // Only print the non-retail options if the system is in debug mode.
-    const int option_count = ((IOS_CheckDebugMode() == 0) ? 7 : 4);
+    const int option_count = ((IOS_CheckDebugMode() == 0) ? 10 : 7);
 
     int rval;
     uint64_t newtid = 0;
